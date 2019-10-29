@@ -7,12 +7,16 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { EstudianteComponent } from './estudiante/estudiante.component';
 import{EstudianteService} from './estudiante/estudiante.service';
+import { HomeComponent } from './home/home.component';
+import { ContactenosComponent } from './contactenos/contactenos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     EstudianteComponent,
+    HomeComponent,
+    ContactenosComponent,
 
   ],
   imports: [
