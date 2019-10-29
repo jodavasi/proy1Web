@@ -1,0 +1,70 @@
+
+
+<table>
+	<tr>
+		<th>id</th>
+		<th>nombre</th>
+		<th>apellido</th>
+	</tr>
+	<tr *ngFor="let estudiante of estudiantes">
+		<td>{{estudiante.id}}</td>
+		<td>{{estudiante.nombre}}</td>
+		<td>{{estudiante.apellido}}</td>
+		<td>
+            <a class="waves-effect indigo darken-4 btn" (click)="edit(estudiante)">Modificar</a>
+			
+		</td>
+	</tr>
+</table>
+
+<div *ngIf="show_form">
+    <h4>Rubros</h4>
+    <input type="number"  placeholder="tarea" id="tareaR" [(ngModel)]="tareaR">
+    <input type="number"  placeholder="quiz" id="quizR" [(ngModel)]="quizR">
+    <input type="number"  placeholder="exposicion" id="exposicionR" [(ngModel)]="exposicionR">
+    <input type="number"  placeholder="proyecto" id="proyectoR" [(ngModel)]="proyectoR">
+    <input type="number"  placeholder="examen" id="examenR" [(ngModel)]="examenR">
+    
+    
+    
+    
+    
+    
+    
+  </div>
+
+  <div *ngIf="show_form">
+    <h4>Calificacion</h4>
+    <input type="number"  placeholder="tarea" id="tarea" [(ngModel)]="tarea">
+    <a class="waves-effect indigo darken-4 btn" (click)="calcularNotasTarea()">Modificar</a><h6>porcentaje tarea:{{t}}</h6>
+    
+    <input type="number"  placeholder="quiz" id="quiz" [(ngModel)]="quiz">
+    <a class="waves-effect indigo darken-4 btn" (click)="calcularNotasQuiz()">Modificar</a><h6>porcentaje quiz:{{q}}</h6>
+
+    <input type="number"  placeholder="exposicion" id="exposicion" [(ngModel)]="exposicion">
+    <a class="waves-effect indigo darken-4 btn" (click)="calcularNotasExposicion()">Modificar</a><h6>porcentaje exposicion:{{x}}</h6>
+    
+    <input type="number"  placeholder="proyecto" id="proyecto" [(ngModel)]="proyecto">
+    <a class="waves-effect indigo darken-4 btn" (click)="calcularNotasProyecto()">Modificar</a><h6>porcentaje proyecto:{{p}}</h6>
+    
+    <input type="number"  placeholder="examen" id="examen" [(ngModel)]="examen">
+    <a class="waves-effect indigo darken-4 btn" (click)="calcularNotasExamen()">Modificar</a><h6>porcentaje Examen:{{e}}</h6>
+    
+    
+    
+      <br>
+      <br>
+
+      <br>
+      <a class="waves-effect indigo darken-4 btn" (click)="calcularNota()">Modificar</a>
+      <div *ngIf="this.r > 75" class="card-panel green lighten-1"><h4 >Su nota es de: {{r}}</h4></div>
+      <div *ngIf="rhis.r" class="card-panel red lighten-2"><h4>Su nota es de: {{r}}</h4></div>
+    </div>
+
+    
+            
+
+    
+
+  
+    
